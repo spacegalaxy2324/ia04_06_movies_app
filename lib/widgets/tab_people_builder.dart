@@ -26,7 +26,7 @@ class TabPeopleBuilder extends StatelessWidget {
               itemCount: 12,
               itemBuilder: (context, index) => GestureDetector(
                 // onTap: () {
-                //   Get.to(DetailsScreen(movie: snapshot.data![index]));
+                //   Get.to(() => DetailsScreen(movie: snapshot.data![index]));
                 // },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),

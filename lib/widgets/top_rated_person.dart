@@ -21,7 +21,7 @@ class TopRatedPerson extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () => Get.to(
-            PersonDetailsScreen(person: person),
+            () => PersonDetailsScreen(person: person),
           ),
           child: Container(
             child: ClipRRect(

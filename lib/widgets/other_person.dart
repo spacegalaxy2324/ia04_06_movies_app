@@ -21,7 +21,7 @@ class OtherPerson extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () => Get.to(
-            PersonDetailsScreen(person: person),
+            () => PersonDetailsScreen(person: person),
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(16),

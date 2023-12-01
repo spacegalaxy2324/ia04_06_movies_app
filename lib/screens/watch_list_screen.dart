@@ -51,7 +51,8 @@ class WatchList extends StatelessWidget {
                         (movie) => Column(
                           children: [
                             GestureDetector(
-                              onTap: () => Get.to(DetailsScreen(movie: movie)),
+                              onTap: () =>
+                                  Get.to(() => DetailsScreen(movie: movie)),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
@@ -59,18 +60,18 @@ class WatchList extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(16),
                                     child: Image.network(
                                       Api.imageBaseUrl + movie.posterPath,
-                                      height: 180,
-                                      width: 120,
+                                      height: 110,
+                                      width: 80,
                                       fit: BoxFit.cover,
                                       errorBuilder: (_, __, ___) => const Icon(
                                         Icons.broken_image,
-                                        size: 120,
+                                        size: 80,
                                       ),
                                       loadingBuilder: (_, __, ___) {
                                         if (___ == null) return __;
                                         return const FadeShimmer(
-                                          width: 120,
-                                          height: 180,
+                                          width: 80,
+                                          height: 110,
                                           highlightColor: Color(0xff22272f),
                                           baseColor: Color(0xff20252d),
                                         );

@@ -21,7 +21,7 @@ class TopRatedItem extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () => Get.to(
-            DetailsScreen(movie: movie),
+            () => DetailsScreen(movie: movie),
           ),
           child: Container(
             margin: const EdgeInsets.only(left: 12),

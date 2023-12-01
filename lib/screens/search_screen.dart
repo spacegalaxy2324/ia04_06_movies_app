@@ -116,8 +116,9 @@ class _SearchScreenState extends State<SearchScreen> {
                           ),
                         )
                       : ListView.separated(
-                          itemCount:
-                              Get.find<SearchController1>().foundedMovies.length,
+                          itemCount: Get.find<SearchController1>()
+                              .foundedMovies
+                              .length,
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
                           separatorBuilder: (_, __) =>
@@ -126,7 +127,8 @@ class _SearchScreenState extends State<SearchScreen> {
                             Movie movie = Get.find<SearchController1>()
                                 .foundedMovies[index];
                             return GestureDetector(
-                              onTap: () => Get.to(DetailsScreen(movie: movie)),
+                              onTap: () =>
+                                  Get.to(() => DetailsScreen(movie: movie)),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [

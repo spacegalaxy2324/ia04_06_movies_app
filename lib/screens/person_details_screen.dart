@@ -209,11 +209,13 @@ class PersonDetailsScreen extends StatelessWidget {
                                       'Unknown',
                                       textAlign: TextAlign.center,
                                     )
-                                  : Text(
-                                      person.placeOfBirth,
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 16,
+                                  : Flexible(
+                                      child: Text(
+                                        person.placeOfBirth,
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                        ),
                                       ),
                                     );
                             } else {
@@ -398,7 +400,7 @@ class PersonDetailsScreen extends StatelessWidget {
                                               );
                                             },
                                             gridDelegate:
-                                                SliverGridDelegateWithFixedCrossAxisCount(
+                                                const SliverGridDelegateWithFixedCrossAxisCount(
                                               crossAxisCount: 3,
                                               mainAxisSpacing: 2,
                                             ),
