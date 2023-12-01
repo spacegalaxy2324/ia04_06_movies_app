@@ -251,7 +251,7 @@ class PersonDetailsScreen extends StatelessWidget {
                           ),
                           tabs: [
                             Tab(text: 'Biography'),
-                            Tab(text: 'Known For'),
+                            Tab(text: 'Credits'),
                           ]),
                       SizedBox(
                         height: 400,
