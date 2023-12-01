@@ -62,8 +62,9 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         separatorBuilder: (_, __) => const SizedBox(width: 24),
                         itemBuilder: (_, index) => TopRatedItem(
-                            movie: controller.mainTopRatedMovies[index],
-                            index: index + 1),
+                          movie: controller.mainTopRatedMovies[index],
+                          // index: index + 1
+                        ),
                       ),
                     )),
             ),

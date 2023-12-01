@@ -10,11 +10,11 @@ class TopRatedItem extends StatelessWidget {
   const TopRatedItem({
     Key? key,
     required this.movie,
-    required this.index,
+    // required this.index,
   }) : super(key: key);
 
   final Movie movie;
-  final int index;
+  // final int index;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -30,17 +30,25 @@ class TopRatedItem extends StatelessWidget {
               child: Image.network(
                 Api.imageBaseUrl + movie.posterPath,
                 fit: BoxFit.cover,
-                height: 250,
-                width: 180,
-                errorBuilder: (_, __, ___) => const Icon(
-                  Icons.broken_image,
-                  size: 180,
+                height: 100,
+                width: 80,
+                errorBuilder: (_, __, ___) => Container(
+                  color: Color(0xff20252d),
+                  child: SizedBox(
+                      height: 100,
+                      width: 80,
+                      child: Center(
+                        child: Text(
+                          movie.title,
+                          textAlign: TextAlign.center,
+                        ),
+                      )),
                 ),
                 loadingBuilder: (_, __, ___) {
                   if (___ == null) return __;
                   return const FadeShimmer(
-                    width: 180,
-                    height: 250,
+                    width: 80,
+                    height: 100,
                     highlightColor: Color(0xff22272f),
                     baseColor: Color(0xff20252d),
                   );
@@ -49,10 +57,10 @@ class TopRatedItem extends StatelessWidget {
             ),
           ),
         ),
-        Align(
-          alignment: Alignment.bottomLeft,
-          child: IndexNumber(number: index),
-        )
+        // Align(
+        //   alignment: Alignment.bottomLeft,
+        //   child: IndexNumber(number: index),
+        // )
       ],
     );
   }

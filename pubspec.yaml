@@ -17,12 +17,26 @@ dependencies:
   flutter_svg: ^1.1.3
   http: ^0.13.5
   fade_shimmer: ^2.0.1
-  flutter_launcher_icons: ^0.10.0
+  flutter_native_splash: ^2.3.3
+  icons_launcher: ^2.1.4
   
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/popcorn.png"
+icons_launcher:
+  image_path: "assets/android_ico.png"
+  platforms:
+    android:
+      enable: true
+      adaptive_background_color: "#082B57"
+      image_path: "assets/android_ico.png"
+      adaptive_foreground_image: "assets/android_foreground.png"
+
+# dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#082B57"
+  image: assets/android_ico.png
+  android_12:
+    image: assets/android_ico.png
+    color: "#082B57"
+    icon_background_color: "#082B57"
 
 dev_dependencies:
   flutter_test:

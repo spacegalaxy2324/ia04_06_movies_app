@@ -1,15 +1,21 @@
 import 'package:get/get.dart';
 import 'package:movies_app/api/api_service.dart';
 import 'package:movies_app/models/movie.dart';
+import 'package:movies_app/models/person.dart';
 
 class MoviesController extends GetxController {
   var isLoading = false.obs;
   var mainTopRatedMovies = <Movie>[].obs;
+  var popularPeople = <Person>[].obs;
+  var otherPopularPeople = <Person>[].obs;
+
   var watchListMovies = <Movie>[].obs;
   @override
   void onInit() async {
     isLoading.value = true;
     mainTopRatedMovies.value = (await ApiService.getTopRatedMovies())!;
+    popularPeople.value = (await ApiService.getPeople(true))!;
+    otherPopularPeople.value = (await ApiService.getPeople(false))!;
     isLoading.value = false;
     super.onInit();
   }
