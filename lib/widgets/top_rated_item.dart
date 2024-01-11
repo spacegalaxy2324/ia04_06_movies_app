@@ -33,7 +33,7 @@ class TopRatedItem extends StatelessWidget {
                 height: 100,
                 width: 80,
                 errorBuilder: (_, __, ___) => Container(
-                  color: Color(0xff20252d),
+                  color: const Color(0xff20252d),
                   child: SizedBox(
                       height: 100,
                       width: 80,

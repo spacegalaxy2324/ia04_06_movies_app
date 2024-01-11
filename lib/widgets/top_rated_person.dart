@@ -32,14 +32,14 @@ class TopRatedPerson extends StatelessWidget {
                 height: 250,
                 width: 180,
                 errorBuilder: (_, __, ___) => Container(
-                  color: Color(0xff20252d),
+                  color: const Color(0xff20252d),
                   height: 250,
                   width: 180,
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.person, size: 180, color: Colors.white),
-                      const Text('NO IMAGE')
+                      Icon(Icons.person, size: 180, color: Colors.white),
+                      Text('NO IMAGE')
                     ],
                   ),
                 ),
@@ -67,20 +67,20 @@ class TopRatedPerson extends StatelessWidget {
                 Expanded(
                   child: Container(
                     height: 30,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         gradient: LinearGradient(
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                       colors: [
                         Colors.transparent,
-                        const Color(0xFF242A32),
+                        Color(0xFF242A32),
                       ],
                     )),
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
                         person.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           shadows: <Shadow>[
                             Shadow(
                               offset: Offset(1, 1),
