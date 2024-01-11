@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:movies_app/api/api.dart';
 import 'package:movies_app/models/movie.dart';
 import 'package:movies_app/screens/details_screen.dart';
-import 'package:movies_app/widgets/index_number.dart';
 
 class TopRatedItem extends StatelessWidget {
   const TopRatedItem({
